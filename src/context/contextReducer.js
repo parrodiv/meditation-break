@@ -18,6 +18,9 @@ const contextReducer = (state, action) => {
           ...state,
           timer: action.payload
         }
+        break
+      default: 
+        return state
   }
 }
 

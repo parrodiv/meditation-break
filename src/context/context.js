@@ -4,8 +4,8 @@ import contextReducer from "./contextReducer";
 import rainImg from '../components/assets/img/rain.jpg'
 
 const initialState = {
-  timer: null,
-  timeSelected: 0,
+  timer: '00:00',
+  timeSelected: '',
   audioSrc: null,
   imgSrc: rainImg,
 }
