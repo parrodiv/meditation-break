@@ -11,20 +11,20 @@ import seaImg from '../components/assets/img/waves.jpg'
 
 const buttonsSoundImg = [
   {
-    dataSound: { rainSound },
-    dataImg: { rainImg },
+    dataSound: rainSound,
+    dataImg: rainImg,
     className: 'btn',
     text: 'Rain',
   },
   {
-    dataSound: { parkSound },
-    dataImg: { parkImg },
+    dataSound: parkSound,
+    dataImg: parkImg,
     className: 'btn',
     text: 'Park',
   },
   {
-    dataSound: { seaSound },
-    dataImg: { seaImg },
+    dataSound: seaSound,
+    dataImg: seaImg,
     className: 'btn',
     text: 'Sea',
   },

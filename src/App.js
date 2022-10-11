@@ -11,14 +11,12 @@ function App() {
     <>
       <MeditationProvider>
         <Router>
-          <main>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/:status' element={<MeditationPage />} />
               <Route path='/:status' element={<MeditationPage />} />
               <Route path='/:status' element={<MeditationPage />} />
             </Routes>
-          </main>
         </Router>
       </MeditationProvider>
     </>
