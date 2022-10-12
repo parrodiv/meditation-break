@@ -40,6 +40,8 @@ const SoundPicker = () => {
       type: 'SET_SOUND_&_IMG',
       payload: { img, sound },
     })
+
+    dispatch({type: 'PAUSE'})
   }
 
   return (

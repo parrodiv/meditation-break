@@ -13,7 +13,7 @@ const MeditationPage = () => {
     <div className='app min-h-full min-w-full h-screen w-screen flex justify-evenly items-center'>
       <BackgroundImg />
       <TimeSelect />
-      <div className='flex flex-col justify-center imets-center'>
+      <div className='flex flex-col justify-center items-center'>
         <AudioPlayer />
         <Timer />
       </div>

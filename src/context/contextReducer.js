@@ -18,6 +18,16 @@ const contextReducer = (state, action) => {
           ...state,
           timer: action.payload
         }
+      case 'PLAY':
+        return {
+          ...state,
+          isPlaying: true
+        }
+      case 'PAUSE':
+        return {
+          ...state,
+          isPlaying: false
+        }
         break
       default: 
         return state
