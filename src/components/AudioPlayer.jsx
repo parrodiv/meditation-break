@@ -9,8 +9,7 @@ const AudioPlayer = () => {
     isLoaded: false, // when I select a song it will be true
   })
 
-  const { timer, audioSrc, timeSelected, dispatch } =
-    useContext(MeditationContext)
+  const { audioSrc, timeSelected, dispatch } = useContext(MeditationContext)
 
   const songRef = useRef(null)
 
@@ -43,7 +42,7 @@ const AudioPlayer = () => {
   }
 
   return (
-    <div className='play-container'>
+    <>
       <button className='btn' onClick={() => toggleAudio()}>
         Play/pause
       </button>
@@ -52,13 +51,10 @@ const AudioPlayer = () => {
         src={audioSrc}
         onLoadedData={() => setStatus({ ...status, isLoaded: true })}
         onPlaying={() => setStatus({ ...status, isPlaying: true })}
-        onPause={() => setStatus({...status, isPlaying: false})}
+        onPause={() => setStatus({ ...status, isPlaying: false })}
         onTimeUpdate={() => onTimeUpdate()}
       />
-      <h3 className='text-4xl font-bold text-white text-center mt-10'>
-        {timer}
-      </h3>
-    </div>
+    </>
   )
 }
 
