@@ -8,7 +8,7 @@ const Timer = () => {
   const seconds = timer.split(':')[1]
 
   return (
-    <h3 className='countdown font-mono text-white text-6xl flex justify-center items-center block'>
+    <h3 className='countdown font-mono text-white text-5xl lg:text-6xl flex justify-center items-center block'>
       <span style={{ '--value': minutes }}></span>:
       <span style={{ '--value': seconds }}></span>
     </h3>

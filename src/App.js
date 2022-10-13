@@ -13,9 +13,9 @@ function App() {
         <Router>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/:status' element={<MeditationPage />} />
-              <Route path='/:status' element={<MeditationPage />} />
-              <Route path='/:status' element={<MeditationPage />} />
+              <Route path='/:feeling' element={<MeditationPage />} />
+              <Route path='/:feeling' element={<MeditationPage />} />
+              <Route path='/:feeling' element={<MeditationPage />} />
             </Routes>
         </Router>
       </MeditationProvider>

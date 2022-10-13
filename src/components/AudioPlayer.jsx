@@ -45,10 +45,12 @@ const AudioPlayer = () => {
 
   return (
     <div className='relative'>
-      <CircularProgressbar
-        value={songRef?.current?.currentTime}
-        maxValue={timeSelected}
-      />
+      <div className="w-[200px] h-[200px]">
+        <CircularProgressbar
+          value={songRef?.current?.currentTime}
+          maxValue={timeSelected}
+        />
+      </div>
       <div
         className='absolute m-0 top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%]'
         onClick={() => toggleAudio()}
