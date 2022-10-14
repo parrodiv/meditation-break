@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { GiMeditation } from 'react-icons/gi'
 import { useParams } from 'react-router-dom'
 
-import { feelingTips } from '../constants/feelingTips'
 import { MdOutlineNextPlan } from 'react-icons/md'
+import useFilterFeelingTip from '../hooks/useFilterFeelingTip'
 
 const TextTip = () => {
   const { feeling } = useParams()
@@ -12,19 +12,14 @@ const TextTip = () => {
     tip: '',
   })
 
-  useEffect(() => {
-    const feelingTipsFiltered = feelingTips.filter(
-      (tip) => tip.type === feeling
-    )
+  const { feelingTipsFiltered, tip } = useFilterFeelingTip(feeling)
 
+  useEffect(() => {
     setState({
       feelingTipsFiltered,
-      //selezione random del tip
-      tip: feelingTipsFiltered[
-        Math.floor(Math.random() * feelingTipsFiltered.length)
-      ]?.text,
+      tip,
     })
-  }, [feeling])
+  }, [])
 
   return (
     <div className='relative text-tip p-5 my-5 shadow-xl w-3/4 text-center mx-auto border rounded-xl bg-white min-w-2/4'>
