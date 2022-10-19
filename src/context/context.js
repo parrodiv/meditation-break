@@ -17,10 +17,11 @@ export const MeditationProvider = ({children}) => {
   const [state, dispatch] = useReducer(contextReducer, initialState)
 
   const songRef = useRef(null)
+  const breathTextRef = useRef(null)
 
   return (
     <MeditationContext.Provider value={{
-      ...state, dispatch, songRef
+      ...state, dispatch, songRef, breathTextRef
     }}>
       {children}
     </MeditationContext.Provider>

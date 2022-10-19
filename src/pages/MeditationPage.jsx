@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom'
 
 import AudioPlayer from '../components/AudioPlayer'
 import BackgroundImg from '../components/BackgroundImg'
@@ -9,7 +8,6 @@ import Title from '../components/Title'
 import TextTip from '../components/TextTip'
 
 const MeditationPage = () => {
-  const { feeling } = useParams()
 
   return (
     <>

@@ -1,19 +1,14 @@
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState } from 'react'
 import { MeditationContext } from '../context/context'
-import { CircularProgressbar } from 'react-circular-progressbar'
-import 'react-circular-progressbar/dist/styles.css'
-import { FaPlay, FaPause } from 'react-icons/fa'
 
 import formatTime from '../utils/formatTime'
+import AnimatedBreath from './AnimatedBreath'
 
 const AudioPlayer = () => {
   const [isLoaded, setLoaded] = useState(false)
 
-
-
   const { isPlaying, songRef, audioSrc, timeSelected, dispatch } =
     useContext(MeditationContext)
-
 
   const toggleAudio = () => {
     isLoaded
@@ -45,22 +40,7 @@ const AudioPlayer = () => {
 
   return (
     <div className='relative'>
-      <div className="w-[200px] h-[200px]">
-        <CircularProgressbar
-          value={songRef?.current?.currentTime}
-          maxValue={timeSelected}
-        />
-      </div>
-      <div
-        className='absolute m-0 top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%]'
-        onClick={() => toggleAudio()}
-      >
-        {isPlaying ? (
-          <FaPause className='text-8xl text-black cursor-pointer hover:text-white transition' />
-        ) : (
-          <FaPlay className='text-8xl text-black cursor-pointer hover:text-white transition' />
-        )}
-      </div>
+      <AnimatedBreath toggleAudio={toggleAudio} />
       <audio
         ref={songRef}
         src={audioSrc}

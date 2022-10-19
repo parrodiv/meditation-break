@@ -1,3 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-circle {
+  background: conic-gradient(
+    rgba(78, 232, 0, 0.6) 0deg,
+    rgba(78, 181, 0, 0.6) 144deg,
+    rgba(255, 255, 255, 0.6) 144deg,
+    rgba(255, 255, 255, 0.6) 216deg,
+    rgba(8, 73, 2, 0.6) 216deg,
+    rgba(20, 20, 20, 0.6) 360deg
+  );
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.pointer{
+  background-color: #fff;
+  border: 3px linear #000;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -30px;
+  left: 47%;
+  width: 20px;
+  height: calc(50% + 30px);
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+} 
+
+/* BREATH ANIMATION */
+
+.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
