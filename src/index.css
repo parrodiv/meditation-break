@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap');
+@font-face {
+  font-family: 'Meditation Typeface';
+  src: url('./components/assets/fonts/Meditation.ttf') format('truetype');
+}
+
 .gradient-circle {
   background: conic-gradient(
     rgba(78, 232, 0, 0.6) 0deg,
@@ -22,8 +28,8 @@
   background-color: #fff;
   border: 3px linear #000;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   display: block;
 }
 

@@ -9,23 +9,27 @@ import rainImg from '../components/assets/img/rain.jpg'
 import parkImg from '../components/assets/img/park.jpg'
 import seaImg from '../components/assets/img/waves.jpg'
 
+import { FaMusic } from 'react-icons/fa'
+
 const buttonsSoundImg = [
   {
     dataSound: rainSound,
     dataImg: rainImg,
-    className: 'btn',
     text: 'Rain',
   },
   {
     dataSound: parkSound,
     dataImg: parkImg,
-    className: 'btn',
     text: 'Park',
   },
   {
     dataSound: seaSound,
     dataImg: seaImg,
-    className: 'btn',
+    text: 'Sea',
+  },
+  {
+    dataSound: seaSound,
+    dataImg: seaImg,
     text: 'Sea',
   },
 ]
@@ -51,10 +55,10 @@ const SoundPicker = () => {
           key={index + text}
           data-sound={dataSound}
           data-img={dataImg}
-          className={className}
+          className="btn btn-info"
           onClick={(e) => onSetSoundAndImg(e)}
         >
-          {text}
+          <FaMusic className='mr-1'/>{text}
         </button>
       ))}
     </div>

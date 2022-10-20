@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFrown, FaGrimace, FaGrinAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Logo from '../components/assets/img/logo.png'
 
 const Home = () => {
   return (
@@ -12,12 +13,13 @@ const Home = () => {
         <div className='hero-overlay bg-opacity-60'></div>
         <div className='hero-content text-center text-white-content'>
           <div className='max-w-md'>
-            <h1 className='mb-5 text-5xl font-bold'>Meditation Break</h1>
-            <p className='mb-5'>
+            <img src={Logo} alt="" width={200} height={200} className='mx-auto mb-2'/>
+            <h1 className='mb-5 text-8xl font-bold font-meditation'>Meditation Break</h1>
+            <p className='mb-5 text-2xl'>
               Welcome to your inner world. Take a break and enjoy the
               meditation!
             </p>
-            <h3 className='mb-5 text-xl font-bold'>How do you feel today?</h3>
+            <h3 className='mb-5 text-3xl font-bold'>How do you feel today?</h3>
             <Link to='/sad'>
               <button className='btn mr-2 btn-error text-2xl'>
                 <FaFrown />

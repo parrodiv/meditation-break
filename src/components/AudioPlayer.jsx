@@ -4,6 +4,8 @@ import { MeditationContext } from '../context/context'
 import formatTime from '../utils/formatTime'
 import AnimatedBreath from './AnimatedBreath'
 
+  import { toast } from 'react-toastify'
+
 const AudioPlayer = () => {
   const [isLoaded, setLoaded] = useState(false)
 
@@ -15,7 +17,8 @@ const AudioPlayer = () => {
       ? isPlaying
         ? songRef.current.pause()
         : songRef.current.play()
-      : console.log('Audio has not loaded yet')
+      : toast.warn('Select audio before to Play!')
+    timeSelected == '' && toast.warn('Select time before clicking Play!')
   }
 
   const onTimeUpdate = () => {
@@ -40,7 +43,7 @@ const AudioPlayer = () => {
 
   return (
     <div className='relative'>
-      <AnimatedBreath toggleAudio={toggleAudio} />
+      <AnimatedBreath toggleAudio={toggleAudio} isLoaded={isLoaded} />
       <audio
         ref={songRef}
         src={audioSrc}

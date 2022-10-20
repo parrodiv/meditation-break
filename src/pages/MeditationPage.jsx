@@ -7,6 +7,7 @@ import Timer from '../components/Timer'
 import Title from '../components/Title'
 import TextTip from '../components/TextTip'
 
+
 const MeditationPage = () => {
 
   return (

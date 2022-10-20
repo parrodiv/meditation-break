@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { MeditationContext } from '../context/context'
 
+import { FaClock } from 'react-icons/fa'
+
 import formatTime from '../utils/formatTime'
 
 const buttonsTime = [
@@ -43,7 +45,7 @@ const TimeSelect = () => {
           className={className}
           onClick={(e) => onSetTime(e)}
         >
-          {' '}
+          <FaClock className='mr-1' />
           {text}
         </button>
       ))}

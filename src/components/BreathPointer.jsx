@@ -9,8 +9,8 @@ const BreathPointer = ({breathAnimation}) => {
 
   return (
     <>
-      <div className='circle h-full w-full -z-5 bg-[rgba(30,25,10,1] rounded-full absolute top-0 left-0'>
-        <p className='absolute top-10 left-1/2 -translate-x-1/2 text-xl font-bold text-white' ref={breathTextRef}>
+      <div className='h-full w-full -z-5 bg-[rgba(30,25,10,1] rounded-full absolute top-0 left-0'>
+        <p className='absolute top-10 left-1/2 -translate-x-1/2 text-l font-bold text-white' ref={breathTextRef}>
         </p>
       </div>
 

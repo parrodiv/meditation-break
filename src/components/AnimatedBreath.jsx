@@ -6,14 +6,11 @@ import BreathPointer from './BreathPointer'
 
 import { MeditationContext } from '../context/context'
 
-const AnimatedBreath = ({ toggleAudio }) => {
+const AnimatedBreath = ({ toggleAudio, isLoaded }) => {
   const { isPlaying, breathTextRef, songRef, timeSelected } =
     useContext(MeditationContext)
 
   const [className, setClassName] = useState('')
-  const [loop, setLoop] = useState(true)
-
-  // PROVARE CON STATE E breathIn breathOut e hold state
 
   const totalTime = 7500 //ms
   const breathTime = (totalTime / 5) * 2
@@ -36,10 +33,12 @@ const AnimatedBreath = ({ toggleAudio }) => {
   }
 
   const toggleAnimation = () => {
-    if (!isPlaying) {
+    if (!isPlaying && isLoaded && timeSelected !== '') {
       clearInterval(interval.current)
       breathAnimation()
       interval.current = setInterval(breathAnimation, totalTime)
+    } else if (!isLoaded && isPlaying) { 
+      clearInterval(interval.current)
     } else {
       clearInterval(interval.current)
     }

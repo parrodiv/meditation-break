@@ -17,9 +17,20 @@ const TextTip = () => {
   useEffect(() => {
     setState({
       feelingTipsFiltered,
-      tip,
+      tip: tip
     })
   }, [])
+
+  const onChangeTip = () => {
+    const tipsWithoutCurrent = feelingTipsFiltered.filter(tip => tip.text !== state.tip)
+    setState({
+      ...state,
+      tip:
+        tipsWithoutCurrent[
+          Math.floor(Math.random() * tipsWithoutCurrent.length)
+        ]?.text,
+    })
+  }
 
   return (
     <div className='relative text-tip p-5 my-5 shadow-xl w-3/4 text-center mx-auto border rounded-xl bg-white min-w-2/4'>
@@ -30,7 +41,7 @@ const TextTip = () => {
         <GiMeditation />
       </span>
       <h3>{state.tip}</h3>
-      <MdOutlineNextPlan className='absolute text-xl cursor-pointer text-black bottom-5 right-5' />
+      <MdOutlineNextPlan className='absolute text-xl cursor-pointer text-black bottom-5 right-5' onClick={() => onChangeTip()} />
     </div>
   )
 }
