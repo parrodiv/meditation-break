@@ -1,10 +1,6 @@
 import { useContext } from 'react'
 import { MeditationContext } from '../context/context'
 
-import rainSound from '../components/assets/audio/rain.mp3'
-import parkSound from '../components/assets/audio/park.mp3'
-import seaSound from '../components/assets/audio/sea.mp3'
-import fireSound from '../components/assets/audio/fire.mp3'
 
 import rainImg from '../components/assets/img/rain.jpg'
 import parkImg from '../components/assets/img/park.jpg'
@@ -12,6 +8,11 @@ import seaImg from '../components/assets/img/waves.jpg'
 import fireImg from '../components/assets/img/fire.jpeg'
 
 import { FaMusic } from 'react-icons/fa'
+
+const rainSound = '/audio/rain.mp3'
+const parkSound = '/audio/park.mp3'
+const seaSound = '/audio/sea.mp3'
+const fireSound = '/audio/fire.mp3'
 
 const buttonsSoundImg = [
   {

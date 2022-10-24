@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from 'react'
+import { useContext, useState, useRef, useEffect } from 'react'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { FaPlay, FaPause } from 'react-icons/fa'
@@ -9,6 +9,11 @@ import { MeditationContext } from '../context/context'
 const AnimatedBreath = ({ toggleAudio, isLoaded }) => {
   const { isPlaying, breathTextRef, songRef, timeSelected } =
     useContext(MeditationContext)
+
+  useEffect(() => {
+    toggleAnimation()
+    // eslint-disable-next-line
+  }, [isPlaying])
 
   const [className, setClassName] = useState('')
 
@@ -33,11 +38,11 @@ const AnimatedBreath = ({ toggleAudio, isLoaded }) => {
   }
 
   const toggleAnimation = () => {
-    if (!isPlaying && isLoaded && timeSelected !== '') {
+    if (isPlaying && isLoaded && timeSelected !== '') {
       clearInterval(interval.current)
       breathAnimation()
       interval.current = setInterval(breathAnimation, totalTime)
-    } else if (!isLoaded && isPlaying) { 
+    } else if (!isPlaying) {
       clearInterval(interval.current)
     } else {
       clearInterval(interval.current)
@@ -46,7 +51,9 @@ const AnimatedBreath = ({ toggleAudio, isLoaded }) => {
 
   return (
     <>
-      <div className={`${className} w-[190px] h-[190px] md:w-[230px] md:h-[230px] my-5 flex  flex-col items-center justify-center relative`}>
+      <div
+        className={`${className} w-[190px] h-[190px] md:w-[230px] md:h-[230px] my-5 flex  flex-col items-center justify-center relative`}
+      >
         <BreathPointer />
 
         <CircularProgressbar
@@ -59,10 +66,9 @@ const AnimatedBreath = ({ toggleAudio, isLoaded }) => {
         />
       </div>
       <div
-        className='absolute m-0 top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%]'
+        className='absolute hidden md:block m-0 top-[45%] right-[50%] translate-x-[50%] -translate-y-[50%]'
         onClick={() => {
           toggleAudio()
-          toggleAnimation()
         }}
       >
         {isPlaying ? (

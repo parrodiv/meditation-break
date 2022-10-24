@@ -42,13 +42,17 @@ const AudioPlayer = () => {
   }
 
   return (
-    <div className='relative'>
+    <div className='flex flex-col items-center relative'>
       <AnimatedBreath toggleAudio={toggleAudio} isLoaded={isLoaded} />
       <audio
         ref={songRef}
         src={audioSrc}
+        controls={true}
         onLoadedData={() => setLoaded(true)}
-        onPlaying={() => dispatch({ type: 'PLAY' })}
+        onPlaying={() => {
+          dispatch({ type: 'PLAY' })
+          toggleAudio()
+      }}
         onPause={() => dispatch({ type: 'PAUSE' })}
         onTimeUpdate={() => onTimeUpdate()}
       />
