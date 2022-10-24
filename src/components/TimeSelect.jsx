@@ -8,17 +8,14 @@ import formatTime from '../utils/formatTime'
 const buttonsTime = [
   {
     dataTime: '120',
-    className: 'btn',
     text: '2 min',
   },
   {
     dataTime: '300',
-    className: 'btn',
     text: '5 min',
   },
   {
     dataTime: '600',
-    className: 'btn',
     text: '10 min',
   },
 ]
@@ -37,12 +34,12 @@ const TimeSelect = () => {
   }
 
   return (
-    <div className='time-select flex flex-col gap-5'>
+    <div className='time-select flex flex-row md:flex-col gap-3 md:gap-5'>
       {buttonsTime.map(({ dataTime, className, text }, index) => (
         <button
           key={index + text}
           data-time={dataTime}
-          className={className}
+          className="btn btn-sm md:btn-lg opacity-80"
           onClick={(e) => onSetTime(e)}
         >
           <FaClock className='mr-1' />

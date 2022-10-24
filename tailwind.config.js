@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        meditation: ["Meditation Typeface", "sans-serif"],
-        saira: ['Saira Condensed', 'sans-serif']
+        meditation: ['Meditation Typeface', 'sans-serif'],
+        yeseva: ['Yeseva One', 'cursive'],
       },
-    }
+    },
   },
   plugins: [require('daisyui')],
 }

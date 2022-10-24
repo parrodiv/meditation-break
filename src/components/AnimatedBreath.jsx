@@ -46,7 +46,7 @@ const AnimatedBreath = ({ toggleAudio, isLoaded }) => {
 
   return (
     <>
-      <div className={`${className} w-[230px] h-[230px] flex  flex-col items-center justify-center scale-100 relative`}>
+      <div className={`${className} w-[190px] h-[190px] md:w-[230px] md:h-[230px] my-5 flex  flex-col items-center justify-center relative`}>
         <BreathPointer />
 
         <CircularProgressbar

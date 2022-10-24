@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
 @font-face {
   font-family: 'Meditation Typeface';
   src: url('./components/assets/fonts/Meditation.ttf') format('truetype');
 }
+
+@import 'animate.css';
+
 
 .gradient-circle {
   background: conic-gradient(

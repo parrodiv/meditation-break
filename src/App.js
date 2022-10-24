@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
-    <div className='font-saira'>
+    <div className='font-yeseva'>
       <MeditationProvider>
         <Router>
           <Routes>

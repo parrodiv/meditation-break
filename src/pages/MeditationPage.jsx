@@ -13,12 +13,12 @@ const MeditationPage = () => {
   return (
     <>
       <BackgroundImg />
-      <div className='w-full h-full min-h-screen p-4 my-auto flex flex-col justify-evenly'>
+      <div className='animate__animated animate__fadeIn w-full h-full min-h-screen p-4 my-auto flex flex-col justify-evenly'>
         <Title />
 
         <TextTip />
 
-        <div className='flex justify-evenly items-center '>
+        <div className='flex flex-col md:flex-row justify-evenly items-center gap-4 md:gap-0 '>
           <TimeSelect />
           <div className='flex flex-col justify-center items-center'>
             <Timer />

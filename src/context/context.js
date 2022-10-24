@@ -1,13 +1,13 @@
 import { useReducer, createContext, useRef } from "react";
 import contextReducer from "./contextReducer";
 
-import rainImg from '../components/assets/img/rain.jpg'
+import Home_Bg from '../components/assets/img/home_bg.gif'
 
 const initialState = {
   timer: '00:00',
   timeSelected: '',
   audioSrc: null,
-  imgSrc: rainImg,
+  imgSrc: Home_Bg,
   isPlaying: false
 }
 

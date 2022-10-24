@@ -18,11 +18,11 @@ const Timer = () => {
   }
 
   return (
-    <div className='mb-7'>
+    <div className='mb-3 md:mb-5 flex flex-row md:flex-col'>
       <span onClick={() => resetTimer()}>
-        <GiReturnArrow className='mx-auto w-[30px] h-[30px] text-black hover:text-white cursor-pointer' />
+        <GiReturnArrow className='mr-2 md:mx-auto w-[20px] h-[20px] md:w-[30px] md:h-[30px] text-black hover:text-white cursor-pointer' />
       </span>
-      <h3 className='countdown font-mono text-white text-5xl lg:text-6xl flex justify-center items-center block'>
+      <h3 className='countdown font-mono text-white text-2xl md:text-6xl flex justify-center items-center block'>
         <span style={{ '--value': minutes }}></span>:
         <span style={{ '--value': seconds }}></span>
       </h3>

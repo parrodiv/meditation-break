@@ -18,7 +18,7 @@ const AudioPlayer = () => {
         ? songRef.current.pause()
         : songRef.current.play()
       : toast.warn('Select audio before to Play!')
-    timeSelected == '' && toast.warn('Select time before clicking Play!')
+    timeSelected === '' && toast.warn('Select time before clicking Play!')
   }
 
   const onTimeUpdate = () => {

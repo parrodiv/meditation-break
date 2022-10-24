@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { GiMeditation } from 'react-icons/gi'
 import { useParams } from 'react-router-dom'
 
-import { MdOutlineNextPlan } from 'react-icons/md'
 import useFilterFeelingTip from '../hooks/useFilterFeelingTip'
 
 const TextTip = () => {
@@ -17,31 +16,47 @@ const TextTip = () => {
   useEffect(() => {
     setState({
       feelingTipsFiltered,
-      tip: tip
+      tip: tip,
     })
+    // eslint-disable-next-line
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      onChangeTip()
+    }, 10000)
+
+    return () => clearInterval(interval)
+    // eslint-disable-next-line
+  }, [state.tip])
+
   const onChangeTip = () => {
-    const tipsWithoutCurrent = feelingTipsFiltered.filter(tip => tip.text !== state.tip)
+    const tipsWithoutCurrent = feelingTipsFiltered.filter(
+      (tip) => tip.text !== state.tip
+    )
+
     setState({
       ...state,
-      tip:
-        tipsWithoutCurrent[
-          Math.floor(Math.random() * tipsWithoutCurrent.length)
-        ]?.text,
+      tip: tipsWithoutCurrent[
+        Math.floor(Math.random() * tipsWithoutCurrent.length)
+      ]?.text,
     })
   }
 
   return (
-    <div className='relative text-tip p-5 my-5 shadow-xl w-3/4 text-center mx-auto border rounded-xl bg-white min-w-2/4'>
-      <span className='absolute -top-10 left-0 text-5xl text-black rotate-5'>
+    <div className='relative opacity-80 text-tip p-5 my-5 shadow-xl w-3/4 text-center mx-auto border rounded-xl bg-white min-w-2/4'>
+      <span className='absolute -translate-y-1/2 top-1/2 left-0 text-xl md:text-4xl text-blue-300 rotate-5'>
         <GiMeditation />
       </span>
-      <span className='absolute -top-10 right-0  text-5xl text-black rotate-5'>
+      <span className='absolute -translate-y-1/2 top-1/2 right-0  text-xl md:text-4xl  text-blue-300 rotate-5'>
         <GiMeditation />
       </span>
-      <h3>{state.tip}</h3>
-      <MdOutlineNextPlan className='absolute text-xl cursor-pointer text-black bottom-5 right-5' onClick={() => onChangeTip()} />
+      <p
+        key={Math.random()}
+        className='animate__animated animate__fadeIn font-light text-black text-m md:text-l lg:text-xl'
+      >
+        {state.tip}
+      </p>
     </div>
   )
 }
