@@ -10,9 +10,10 @@
   <br>
   <br>
 
-  <a align="center" href="https://github.com/">
-    <img src="src/components/assets/img/title.png" alt="screenshot">
-  </a>
+  <div align='center'>
+  <img src='src/components/assets/img/title.png' height= 'auto' width= '400px'>
+  </div>
+
 </p>
 
 <details open="open">
@@ -43,6 +44,7 @@
 I have created a meditation web app that allows you to meditate in a very simple way and follows you step by step with phrases that can help you lift your mood.
 
 ### Home
+
 <br>
 <div align='center'>
 <img src='src/components/assets/img/screenshot_homepage.png' height= 'auto' width= '400px'>
@@ -53,6 +55,7 @@ On the home page you are asked about the mood of the day, so the phrases that yo
 <br>
 
 ### Meditation Page
+
 <br>
 <div align='center'>
 <img src='src/components/assets/img/screenshot_meditation.png' height= 'auto' width= '400px'>
@@ -71,15 +74,16 @@ Once the timer has started you will see the central circle expand and shrink wit
 <br>
 
 ### Built With
-* [React](https://it.reactjs.org/)
-* [Tailwind CSS](https://tailwindcss.com)
-* [Daisy UI](https://daisyui.com/)
-* [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar)
-* [react-router-dom-v6](https://reactrouter.com/en/main)
-* [react-icons](https://react-icons.github.io/react-icons)
-* [Animate.css](https://animate.style/#best-practices)
-* [react-toastify](https://www.npmjs.com/package/react-toastify)
-* Background images and sounds were downloaded from [Pixabay](https://pixabay.com/it)
+
+- [React](https://it.reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Daisy UI](https://daisyui.com/)
+- [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar)
+- [react-router-dom-v6](https://reactrouter.com/en/main)
+- [react-icons](https://react-icons.github.io/react-icons)
+- [Animate.css](https://animate.style/#best-practices)
+- [react-toastify](https://www.npmjs.com/package/react-toastify)
+- Background images and sounds were downloaded from [Pixabay](https://pixabay.com/it)
 
 ## Getting Started
 
@@ -87,31 +91,36 @@ Once the timer has started you will see the central circle expand and shrink wit
 
 To start the application you need to have Node.js installed on your computer, so to install the latest version run the following command:
 
-  ```sh
-  npm install npm@latest -g
-  ```
+```sh
+npm install npm@latest -g
+```
 
 ### Installation
 
 1. Clone the repository with git in the path you prefer:
+
 ```sh
  git clone https://github.com/parrodiv/meditation-break.git
 ```
 
 2. Install NPM packages
- ```sh
-  npm install
- ```
+
+```sh
+ npm install
+```
 
 3. Open app with:
+
 ```sh
   npm start / npm run start
 ```
 
 ## License
+
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Links & Contacts
+
 Linkedin - [Alessandro Parrilla](https://www.linkedin.com/in/alessandro-parrilla-994931222/) - alessandro.parrilla.dev@gmail.com
 
 Website: https://meditationbreak.netlify.app
