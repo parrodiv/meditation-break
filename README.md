@@ -10,7 +10,7 @@
   <br>
   <br>
 
-  <a href="https://github.com/">
+  <a align="center" href="https://github.com/">
     <img src="src/components/assets/img/title.png" alt="screenshot">
   </a>
 </p>
@@ -45,7 +45,7 @@ I have created a meditation web app that allows you to meditate in a very simple
 ### Home
 <br>
 <div align='center'>
-<img src='src/components/assets/img/screenshot_home.png' height= 'auto' width= '400px'>
+<img src='src/components/assets/img/screenshot_homepage.png' height= 'auto' width= '400px'>
 </div>
 <br>
 <br>
