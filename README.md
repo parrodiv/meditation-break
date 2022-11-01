@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+<p align="center">
+  
+  <h1 align="center">Meditation Break</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    A meditation app that will help you at any time of the day. <br>
+    Take a break, meditate and relax!
+  </p>
 
-## Available Scripts
+  <br>
+  <br>
 
-In the project directory, you can run:
+  <a href="https://github.com/">
+    <img src="src/components/assets/img/title.png" alt="screenshot">
+  </a>
+</p>
 
-### `npm start`
+<details open="open">
+  <summary><h2 style="display: inline-block">Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#meditation-page">Meditation Page</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#links-contacts">Links & Contacts</a></li>
+  </ol>
+</details>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I have created a meditation web app that allows you to meditate in a very simple way and follows you step by step with phrases that can help you lift your mood.
 
-### `npm test`
+### Home
+<br>
+<div align='center'>
+<img src='src/components/assets/img/screenshot_home.png' height= 'auto' width= '400px'>
+</div>
+<br>
+<br>
+On the home page you are asked about the mood of the day, so the phrases that you will see scroll on the meditation page are customized according to your mood
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Meditation Page
+<br>
+<div align='center'>
+<img src='src/components/assets/img/screenshot_meditation.png' height= 'auto' width= '400px'>
+</div>
+<br>
+On this page, phrases will appear every 10 seconds to help you improve your day and reflect on the benefits of meditation. <br>
 
-### `npm run build`
+In addition you can you can select the timer, reset it and set the sound you like best. <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once the timer has started you will see the central circle expand and shrink with the rhythm of your breath, follow it and you will see how you will feel the well-being of a deep and accurate breath like the one that is guided to you in this web app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
+<div align='center'>
+<img src='src/components/assets/img/breath.gif' height= 'auto' width= '400px'>
+</div>
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Built With
+* [React](https://it.reactjs.org/)
+* [Tailwind CSS](https://tailwindcss.com)
+* [Daisy UI](https://daisyui.com/)
+* [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar)
+* [react-router-dom-v6](https://reactrouter.com/en/main)
+* [react-icons](https://react-icons.github.io/react-icons)
+* [Animate.css](https://animate.style/#best-practices)
+* [react-toastify](https://www.npmjs.com/package/react-toastify)
+* Background images and sounds were downloaded from [Pixabay](https://pixabay.com/it)
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start the application you need to have Node.js installed on your computer, so to install the latest version run the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  ```sh
+  npm install npm@latest -g
+  ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
 
-## Learn More
+1. Clone the repository with git in the path you prefer:
+```sh
+ git clone https://github.com/parrodiv/meditation-break.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install NPM packages
+ ```sh
+  npm install
+ ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Open app with:
+```sh
+  npm start / npm run start
+```
 
-### Code Splitting
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Links & Contacts
+Linkedin - [Alessandro Parrilla](https://www.linkedin.com/in/alessandro-parrilla-994931222/) - alessandro.parrilla.dev@gmail.com
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Website: https://meditationbreak.netlify.app
